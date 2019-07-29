@@ -1,6 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
+$zipArgs = @{
+	PackageName 	= 'keeper-password-manager'
+	Url				= 'https://keepersecurity.com/desktop_electron/Win32/KeeperSetup32.zip'
+	Url64			= 'https://keepersecurity.com/desktop_electron/Win64/KeeperSetup64.zip'
+	UnzipLocation 	= $toolsDir
+
+}
+
+Install-ChocolateyZipPackage @zipArgs
+
 $fileLocation = Join-Path $toolsDir 'KeeperSetup32.exe'
 $fileLocation64 = Join-Path $toolsDir 'KeeperSetup64.exe'
 
