@@ -6,7 +6,7 @@ $functionpath = "$(Split-Path -Parent $testPath)\build\Get-ChocolateyPackageMeta
 . $functionpath
 
 $package = Get-ChocolateyPackageMetaData -NuspecFile "$env:Nuspec"
-$installScript = Get-Content "$env:NuspectDirectory\tools\chocolateyInstall.ps1"
+$installScript = Get-Content "$($env:NuspecDirectory)\tools\chocolateyInstall.ps1"
 
 Describe "Packages should contain certain information" {
 
