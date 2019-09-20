@@ -1,0 +1,54 @@
+pool:
+  name: Azure Pipelines
+steps:
+- task: PowerShell@2
+  displayName: 'Grep Git For Changed Package'
+  inputs:
+    targetType: filePath
+    filePath: ./grep.ps1
+
+- task: PowerShell@2
+  displayName: 'Set Pipeline variables'
+  inputs:
+    targetType: filePath
+    filePath: ./search.ps1
+
+- task: PowerShell@2
+  displayName: 'Run Pester Tests'
+  inputs:
+    targetType: filePath
+    filePath: ./build/pester.ps1
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results'
+  inputs:
+    testResultsFormat: NUnit
+    testResultsFiles: '$(Package)*.xml'
+    searchFolder: '$(Build.ArtifactStagingDirectory)'
+    mergeTestResults: true
+
+- task: gep13.chocolatey-azuredevops.chocolatey-azuredevops.ChocolateyCommand@0
+  displayName: 'Chocolatey pack'
+  inputs:
+    packWorkingDirectory: '$(NuspecDirectory)'
+    packNuspecFileName: '$(NuspecFile)'
+
+- task: gep13.chocolatey-azuredevops.chocolatey-azuredevops.ChocolateyCommand@0
+  displayName: 'Chocolatey Install test'
+  inputs:
+    command: install
+    installPackageId: '$(Package)'
+    installSource: '$(Build.ArtifactStagingDirectory)'
+
+- task: gep13.chocolatey-azuredevops.chocolatey-azuredevops.ChocolateyCommand@0
+  displayName: 'Chocolatey Uninstall test'
+  inputs:
+    command: custom
+    customCommand: uninstall
+    customArguments: '$(Package)'
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Nupkg'
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+
