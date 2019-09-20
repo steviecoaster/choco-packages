@@ -1,5 +1,6 @@
 pool:
   name: Azure Pipelines
+  enabled: false
 steps:
 - task: PowerShell@2
   displayName: 'Grep Git For Changed Package'
