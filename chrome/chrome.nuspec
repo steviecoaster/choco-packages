@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chrome</id>
-    <version>77.0</version>
+    <version>77.0.0</version>
     <title>chrome (Install)</title>
     <authors>Me</authors>
     <tags>chrome SPACE_SEPARATED</tags>
