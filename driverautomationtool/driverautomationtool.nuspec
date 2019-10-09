@@ -2,11 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>driverautomationtool</id>
+    <owners>chocolatey</owners>
     <version>6.3.1</version>
     <title>driverautomationtool (Install)</title>
     <authors>Maurice-Daly</authors>
-    <projectUrl>https://gallery.technet.microsoft.com/Driver-Tool-Automate-9ddcc010</projectUrl>
-    <tags>driverautomationtool SPACE_SEPARATED</tags>
+    <projectUrl>https://www.scconfigmgr.com/driver-automation-tool/</projectUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <tags>driverautomationtool sccm configmgr</tags>
     <summary>The script generates a PowerShell GUI to automate the processes of downloading, extracting and importing driver packages for Dell, Lenovo, HP and Microsoft systems.</summary>
     <description>The script generates a PowerShell GUI to automate the processes of downloading, extracting and importing driver packages for Dell, Lenovo, HP and Microsoft systems.
 
@@ -34,6 +36,7 @@
   <dependencies>
     <dependency id="vs2015.isolatedshell" />
   </dependencies>
+  <packageSourceUrl>https://github.com/steviecoaster/choco-packages/tree/master/VS2015.IsolatedShell</packageSourceUrl?
 </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
