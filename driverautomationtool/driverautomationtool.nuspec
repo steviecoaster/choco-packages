@@ -36,7 +36,7 @@
   <dependencies>
     <dependency id="vs2015.isolatedshell" />
   </dependencies>
-  <packageSourceUrl>https://github.com/steviecoaster/choco-packages/tree/master/VS2015.IsolatedShell</packageSourceUrl?
+  <packageSourceUrl>https://github.com/steviecoaster/choco-packages/tree/master/VS2015.IsolatedShell</packageSourceUrl>
 </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->

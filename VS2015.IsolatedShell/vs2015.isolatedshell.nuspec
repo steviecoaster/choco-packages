@@ -6,7 +6,9 @@
     <title>VS2015.IsolatedShell (Install)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://visualstudio.microsoft.com</projectUrl>
-    <tags>vs2015.isolatedshell IsolatedShell Development</tags>
+    <licenseUrl>https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/</licenseUrl>
+    <packageSourceUrl>https://github.com/steviecoaster/choco-packages/tree/master/VS2015.IsolatedShell</packageSourceUrl>
+    <tags>vs2015.isolatedshell IsolatedShell Development visualstudio vs</tags>
     <summary>Installs VS2015 Isolated Shell</summary>
     <description>Installs VS2015 Isolated Shell</description>
   </metadata>
