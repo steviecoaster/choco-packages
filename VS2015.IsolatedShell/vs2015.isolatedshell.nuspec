@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vs2015.isolatedshell</id>
+    <version>14.0.23107.10</version>
+    <title>VS2015.IsolatedShell (Install)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://visualstudio.microsoft.com</projectUrl>
+    <tags>vs2015.isolatedshell IsolatedShell Development</tags>
+    <summary>Installs VS2015 Isolated Shell</summary>
+    <description>Installs VS2015 Isolated Shell</description>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
