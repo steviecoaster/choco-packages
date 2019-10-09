@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>driverautomationtool</id>
+    <version>6.3.1</version>
+    <title>driverautomationtool (Install)</title>
+    <authors>Maurice-Daly</authors>
+    <projectUrl>https://gallery.technet.microsoft.com/Driver-Tool-Automate-9ddcc010</projectUrl>
+    <tags>driverautomationtool SPACE_SEPARATED</tags>
+    <summary>The script generates a PowerShell GUI to automate the processes of downloading, extracting and importing driver packages for Dell, Lenovo, HP and Microsoft systems.</summary>
+    <description>The script generates a PowerShell GUI to automate the processes of downloading, extracting and importing driver packages for Dell, Lenovo, HP and Microsoft systems.
+
+    The tool automates the following processes;
+
+    Queries XML content from Dell, Lenovo, HP and Microsoft
+    Provides Driver downloads for all listed manufacturers
+    Provides BIOS downloads for Dell, Lenovo or HP systems
+    Create a BIOS update package
+    Download driver package file for each model
+    Extract the drivers contained within
+    Import the extracted drivers
+    Create a category based on the machine model
+    Create a Driver Package based on the machine make, model and version of the extracted drivers
+    Import the associated drivers into the newly created driver package.  Options allow for either a standard program package or driver package to suit your deployment method 
+    The script can be run against SCCM, MDT, both SCCM/MDT or as a standalone driver download utility (by popular request). 
+
+    Please dont forget to click on the ratings stars to rate this tool and leave feedback. 
+
+    PLEASE NOTE
+
+    Note that the utility is provided "as is", without warranty or support. Models are subject to availability provided within the manufacturer feeds.
+
+  </description>
+  <dependencies>
+    <dependency id="vs2015.isolatedshell" />
+  </dependencies>
+</metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
